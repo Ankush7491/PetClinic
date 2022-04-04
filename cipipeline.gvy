@@ -1,5 +1,5 @@
 pipeline {
-    agent 007
+    agent {label '007'}
     stages {
         stage('compile') {
 	         steps {
