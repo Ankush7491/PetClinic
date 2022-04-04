@@ -1,5 +1,5 @@
 pipeline {
-    agent spy
+    agent 007
     stages {
         stage('compile') {
 	         steps {
