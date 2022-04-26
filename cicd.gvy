@@ -60,8 +60,8 @@ pipeline {
 	         steps {
               withDockerRegistry(credentialsId: 'DOCKER_HUB_LOGIN', url: 'https://index.docker.io/') {
                     sh script: 'cd  $WORKSPACE'
-                    sh script: 'docker build --file Dockerfile --tag docker.io/cicloud/myapp:$BUILD_NUMBER'
-                    sh script: 'docker push docker.io/cicloud/myapp:tagname:$BUILD_NUMBER'
+                    sh script: 'docker build --file Dockerfile --tag docker.io/cicloud/petclinic:$BUILD_NUMBER .'
+                    sh script: 'docker push docker.io/cicloud/petclinic:$BUILD_NUMBER'
               }	
            }		
         }
